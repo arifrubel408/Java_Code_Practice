@@ -6,14 +6,25 @@ public class ShapeTest {
         drawShape(new Square(4));
         drawShape(new Circle(5));
         drawShape(new Rectangle(3,5));
+        System.out.println(" ");
+        System.out.println("Area Of circle " +area(new Circle(4)));
+        System.out.println("Area Of Square " +area(new Square(4)));
+        System.out.println("Area Of Rectangle " +area(new Rectangle(3,4)));
+        
+        
+        
         
         
 //        Shape obj = new Circle(6);
 //        drawShape(obj);
 //        
+        
+        
 //        Shape obj1 = new Square(8);
 //        drawShape(obj1);
         
+
+
 //        drawCircle();
 //        drawSquare();
     }
@@ -21,6 +32,10 @@ public class ShapeTest {
     
     public static void  drawShape(Shape shape){
         shape.draw();
+    }
+    
+     public static double  area(Shape shape){
+       return  shape.getArea();
     }
     
 //    public static void drawSquare(){
@@ -72,13 +87,14 @@ class Circle implements Shape {
 
     private int r;
 
-    public Circle(int a) {
+    public Circle(int r) {
         this.r = r;
     }
 
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(r, 2);
+        //return 3.1416*r*r;
+       return Math.PI * Math.pow(r, 2);
     }
 
     @Override
